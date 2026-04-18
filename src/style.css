@@ -1,0 +1,292 @@
+/* Base Styles */
+body {
+    background-color: #6367FF;
+    color: #FFDBFD;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* IMPORTANT: remove this */
+}
+
+/* Navbar */
+.nav-div {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    background: linear-gradient(135deg, #6367FF, #7A7DFF);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    padding: 15px 0;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* REMOVE THIS COMPLETELY */
+/* .navbar { ... } */
+
+/* Buttons */
+.nav-btn {
+    background-color: #FFDBFD;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-2px);
+}
+
+/* Title */
+.main-title {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px;
+}
+
+.profile-wrapper {
+    flex-shrink: 0;
+}
+
+.profile-wrapper img {
+    height: 280px;
+    width: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.profile-text {
+    font-size: 4rem;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.skills-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #FFDBFD;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.skill-card {
+    background-color: #FFDBFD;
+    color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    background-color: #8494FF;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.projects-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.project-card {
+    background: #FFDBFD;
+    color: #333;
+    padding: 25px;
+    border-radius: 18px;
+
+    text-align: left;
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card h2 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.project-card:hover {
+    background: #8494FF;
+    color: white;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card ul {
+    padding-left: 18px;
+    margin-top: 10px;
+}
+
+.project-card li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact-btn {
+    background-color: #FFDBFD;
+    color: #333;
+    text-decoration: none;
+
+    padding: 12px 25px;
+    border-radius: 25px;
+
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.contact-btn:hover {
+    background-color: #8494FF;
+    color: white;
+    transform: scale(1.1);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-btn:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.contact-btn:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.contact-btn:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.contact-btn:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Container */
+.about-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Text */
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #FFDBFD;
+
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Highlight important words */
+.highlight {
+    color: white;
+    font-weight: 600;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger animation */
+.about-text:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.about-text:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.about-text:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.about-text:nth-child(4) {
+    animation-delay: 0.8s;
+}
